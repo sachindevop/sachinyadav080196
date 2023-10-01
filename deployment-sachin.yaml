@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sachin
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sachin
+  template:
+    metadata:
+      labels:
+        app: sachin
+    spec:
+      containers:
+      - name: sachin-123034
+        image: sachin-123034
+        ports:
+        - containerPort: 80
+
